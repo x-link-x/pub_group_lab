@@ -5,9 +5,9 @@ from src.drink import Drink
 class TestDrink(unittest.TestCase):
 
     def setUp(self):
-        self.drink = Drink("Martini", 5)
+        self.drink = Drink("Martini", 5, 4)
         
-    def test_drink_has_name(self):
+    def test_drink_has_name(self,):
         expected = "Martini"
         actual = self.drink.name
         self.assertEqual(expected, actual)
@@ -18,3 +18,7 @@ class TestDrink(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     
+    def test_drink_has_alcohol_level(self):
+        expected = 4
+        actual = self.drink.alcohol_level
+        self.assertEqual(expected, actual)
